@@ -27,11 +27,11 @@ public class ftproveedor {
 
     public DefaultTableModel mostrar(String buscar) {
         DefaultTableModel modelo;
-        String[] titulos = {"idproveedor", "Denominacion", "Ruc", "Contacto", "Celular"};
-        String[] registros = new String[5];
+        String[] titulos = {"id", "Denominacion", "Ruc", "Celular"};
+        String[] registros = new String[4];
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
-        sSQL = "select * from proveedor p join persona pe on p.Persona_idpersona = pe.idpersona where nomproveedor like '%" + buscar + "%' order by idproveedor";
+        sSQL = "select * from proveedor  where descripccion like '%" + buscar + "%' order by idproveedor";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
