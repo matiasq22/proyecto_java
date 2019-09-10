@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="705e56ef-fd62-4533-bf82-c53cb398581a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="cliente" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="ruc" class="java.lang.String"/>
+	<field name="factura" class="java.lang.String"/>
+	<field name="producto" class="java.lang.String"/>
+	<field name="cantidad" class="java.lang.Integer"/>
+	<field name="precio" class="java.lang.Integer"/>
+	<field name="subtotal" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="218" y="15" width="143" height="33" forecolor="#6699FF" uuid="a5934a24-210b-47e7-b026-269bc2cbecf2"/>
+				<textElement>
+					<font fontName="Agency FB" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BOUTIQUE TIA ELVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="48" width="267" height="20" forecolor="#6699FF" uuid="a4a43538-bd50-4ea6-8219-f8fc06264509"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Av. Luis Alberto del parana. c/ bejarano]]></text>
+			</staticText>
+			<image>
+				<reportElement x="28" y="4" width="64" height="64" uuid="692315f7-5079-4e47-b8d4-59cd5c469260"/>
+				<imageExpression><![CDATA["C:\\Users\\Justino\\Documents\\NetBeansProjects\\Boutique\\src\\icono de formulario usuario\\icons8-camiseta-forester-64.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="138" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="304" height="138" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="aa709cf6-edf8-45ea-bf7c-eea9db637719"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="15" y="12" width="61" height="20" uuid="9e20f869-99bd-4051-83c9-8637e99fe88e"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLIENTE:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="325" y="0" width="230" height="138" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="7ad61e65-eb7f-42ba-bf3d-ba698bde5832"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="403" y="12" width="100" height="20" uuid="7228b486-c74a-4b34-ae47-801c5259012e"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUC 10046495581]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="47" width="112" height="20" uuid="8e555aac-620c-4285-a401-c3d89564f7c7"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FACTURA DE VENTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="80" width="34" height="20" uuid="cd0724fe-e653-40fc-ba89-9d25e78baec7"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NRO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="403" y="80" width="100" height="20" uuid="f9504405-60de-4b4a-bbee-a2626d2be4e2"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{factura}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="47" width="61" height="20" uuid="111ff45c-48af-410c-a98d-ffd2b8c54a4a"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="90" width="61" height="20" uuid="0c033fde-8d1a-44d5-9de9-526c4868ec2b"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.I/RUC:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="86" y="12" width="183" height="20" uuid="25af7f78-0512-45b5-96dc-dd28a49de749"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="47" width="183" height="20" uuid="9d28a9d1-7752-4159-9ced-240eb6bb7c53"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="86" y="90" width="183" height="20" uuid="510bde79-af78-438e-b432-a4cf657805cf"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ruc}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="55" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="10" y="18" width="555" height="45" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="1e8759e6-9c8d-402b-a90e-5bd44e1b98a5"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="0" y="8" width="555" height="45" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="8c3b67b0-99f7-413d-a994-0761640e87b3"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="92" y="21" width="61" height="20" uuid="27cf0ad0-dfdc-436d-b308-c7320a366413"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRODUCTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="243" y="21" width="61" height="20" uuid="d9f1b4d4-3bca-4bf5-b54e-b721a76de3b2"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CANTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="391" y="21" width="61" height="20" uuid="7486da7d-7643-4219-a787-976e65026efe"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRECIO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="15" y="8" width="527" height="46" forecolor="#CCCCCC" uuid="7c0bc8d6-4930-4ff7-acbe-ea7da144998e"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="139" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="120" y="74" width="422" height="49" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="1f2495e9-754b-4bec-ab2b-8eeae888f7db"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="175" y="86" width="61" height="20" uuid="e88bccc2-44ba-4392-a3dd-702e6ba0f0ac"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBTOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="376" y="86" width="61" height="20" uuid="3f4a8cb8-ea53-474d-bcaa-a715a9012455"/>
+				<textElement>
+					<font fontName="Agency FB" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL+IVA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="243" y="86" width="112" height="20" uuid="69c812ee-e2a5-46c5-b25c-08e1c8cb65bf"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="442" y="86" width="100" height="20" uuid="7145c079-22c4-429a-8510-9b787286fe45"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="555" height="45" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="43fd3ae1-b72a-4e16-946d-807c6698f649"/>
+			</rectangle>
+			<textField>
+				<reportElement x="371" y="0" width="71" height="20" uuid="801def60-6839-4ffc-9b44-ca74bfef5c52"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="233" y="0" width="71" height="20" uuid="59c31183-b610-4f45-b77f-3a0364a14750"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="0" width="71" height="20" uuid="202467f7-459c-4cd2-b069-821b252b6957"/>
+				<textElement>
+					<font fontName="Agency FB" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{producto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
