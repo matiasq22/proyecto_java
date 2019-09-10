@@ -27,11 +27,11 @@ public class ftproveedor {
 
     public DefaultTableModel mostrar(String buscar) {
         DefaultTableModel modelo;
-        String[] titulos = {"idproveedor", "Denominacion", "Ruc", "Contacto", "Celular"};
-        String[] registros = new String[5];
+        String[] titulos = {"id", "Denominacion", "Ruc", "Celular"};
+        String[] registros = new String[4];
         totalregistros = 0;
         modelo = new DefaultTableModel(null, titulos);
-        sSQL = "select * from proveedor p join persona pe on p.Persona_idpersona = pe.idpersona where nomproveedor like '%" + buscar + "%' order by idproveedor";
+        sSQL = "select * from proveedor  where descripccion like '%" + buscar + "%' order by idproveedor";
         try {
             Statement st = cn.createStatement();
             ResultSet rs = st.executeQuery(sSQL);
@@ -53,12 +53,12 @@ public class ftproveedor {
     }
 
     public boolean insertar(vproveedor dts) {
-        sSQL = "insert into proveedor (nomproveedor,ruc,Persona_idpersona)" + "values (?,?,?)";
+        sSQL = "insert into proveedor (descripcion,ruc,telefono)" + "values (?,?,?)";
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
-            pst.setString(1, dts.getNomproveedor());
+            pst.setString(1, dts.getDescripcion());
             pst.setString(2, dts.getRuc());
-            pst.setInt(3, dts.getIdpersona());
+            pst.setString(3, dts.getTelefono());
             int n = pst.executeUpdate();
             if (n != 0) {
                 return true;
@@ -72,10 +72,10 @@ public class ftproveedor {
     }
 
     public boolean eliminar(vproveedor dts) {
-        sSQL = "delete from proveedor where idproveedor=?";
+        sSQL = "delete from proveedor where id = ?";
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
-            pst.setInt(1, dts.getIdproveedor());
+            pst.setInt(1, dts.getId());
             int n = pst.executeUpdate();
             if (n != 0) {
                 return true;
@@ -93,9 +93,9 @@ public class ftproveedor {
                 + "where idproveedor=?";
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
-            pst.setString(1, dts.getNomproveedor());
+            pst.setString(1, dts.getDescripcion());
             pst.setString(2, dts.getRuc());
-            pst.setInt(3, dts.getIdpersona());
+            pst.setInt(3, dts.getId());
             int n = pst.executeUpdate();
             if (n != 0) {
                 return true;

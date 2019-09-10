@@ -10,34 +10,44 @@ package Modelo;
  * @author Justino
  */
 public class vproveedor {
-    private int idproveedor;
-    private String nomproveedor;
+    private int id;
+    private String descripcion;
     private String ruc;
-    private int idpersona;
+    private String telefono;
 
-
-public vproveedor(int idproveedror, String nomproveedor, String ruc, int idpersona){
-        this.idpersona = idpersona;
-        this.nomproveedor = nomproveedor;
+    public vproveedor(int idr, String descripcion, String ruc, String telefono){
+        this.id = id;
+        this.descripcion = descripcion;
         this.ruc = ruc;
-        this.idproveedor = idproveedor;
+        this.telefono = telefono;
        }
 
-    public int getIdproveedor() {
-        return idproveedor;
+    
+    public int getId() {
+        return id;
     }
 
-    public void setIdproveedor(int idproveedor) {
-        this.idproveedor = idproveedor;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getNomproveedor() {
-        return nomproveedor;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setNomproveedor(String nomproveedor) {
-        this.nomproveedor = nomproveedor;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+
 
     public String getRuc() {
         return ruc;
@@ -47,17 +57,7 @@ public vproveedor(int idproveedror, String nomproveedor, String ruc, int idperso
         this.ruc = ruc;
     }
 
-    public int getIdpersona() {
-        return idpersona;
-    }
 
-    public void setIdpersona(int idpersona) {
-        this.idpersona = idpersona;
-    }
-      
-    public String toString(){
-         return this.nomproveedor;
-    }
 }
 
 
